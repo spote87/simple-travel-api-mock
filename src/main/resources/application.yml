@@ -1,0 +1,39 @@
+security:
+  user:
+    password: password
+  ignored:
+  - "*.bundle.*"
+  oauth2:
+      sso:
+        login-path: /home
+
+
+debug: true
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+
+spring:
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .html
+
+management:
+  security:
+    enabled: false
+
+statistic:
+  endpoint:
+    name: appStatistics
+
+requests:
+  processed: total.requests.processed
+  ok: total.requests.ok
+  clienterror: total.client.error
+  servererror: total.server.error
+  averageresponsetime: requests.average.response.time
+  minresponsetime: requests.min.response.time
+  maxresponsetime: requests.max.response.time

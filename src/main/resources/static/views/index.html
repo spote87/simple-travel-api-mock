@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="travelPriceEngineApp">
+<head>
+    <meta charset="utf-8">
+    <title>Travel Pricing Engine</title>
+    <link rel="stylesheet" href="app/css/style.min.css"/>
+</head>
+<body>
+<div ng-cloak ng-include="'app/travelPriceEngineApp-index.html'"></div>
+
+<script src="dist/lib/angular/angular.min.js"></script>
+<script src="dist/lib//angular-route/angular-route.min.js"></script>
+<script src="dist/lib/ui-select/dist/select.min.js"></script>
+<script src="dist/lib/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="dist/lib/angular-resource/angular-resource.min.js"></script>
+<script src="dist/lib/ng-table/bundles/ng-table.min.js"></script>
+
+<!--application files -->
+<script src="app/app.module.js"></script>
+<script src="app/app.config.js"></script>
+
+<script src="app/services/airports.service.js"></script>
+<script src="app/services/data.service.js"></script>
+<script src="app/services/fares.service.js"></script>
+<script src="app/services/statistics-data.service.js"></script>
+
+<script src="app/components/location-selector/location-selector.component.js"></script>
+
+<script src="app/app.controller.js"></script>
+<script src="app/components/location-selector/location-selector.controller.js"></script>
+<script src="app/states/airport-list/airport-list.controller.js"></script>
+<script src="app/states/get-fare/fare-details.controller.js"></script>
+<script src="app/states/statistic-data/statistic-data.controller.js"></script>
+
+
+</body>
+</html>

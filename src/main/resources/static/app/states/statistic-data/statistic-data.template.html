@@ -1,0 +1,22 @@
+<div class="col-md-6 " ng-controller="StatisticDataController as statisticDataController">
+    <div class="panel panel-warning">
+        <div class="panel-heading"><span>Application Statistics</span></div>
+        </hr>
+        <div class="padding-md">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Key</th>
+                    <th>Value</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in statisticDataController.statistics">
+                    <td ng-bind="item.key"></td>
+                    <td ng-bind="item.value"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

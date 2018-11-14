@@ -1,0 +1,25 @@
+<div class="col-md-auto " ng-controller="AirportListController as airportListController">
+    <div class="panel panel-warning">
+        <div class="panel-heading"><span>Airports List</span></div>
+        </hr>
+        <div class="padding-md">
+            <table ng-table="airportListController.airportsTable" class="table table-striped">
+                <tr ng-repeat="item in $data">
+                    <td data-title="'Name'" sortable="'name'">
+                        {{item.name}}
+                    </td>
+                    <td data-title="'Code'" sortable="'code'">
+                        {{item.code}}
+                    </td>
+                    <td data-title="'Description'">
+                        {{item.description}}
+                    </td>
+                    <td data-title="'Coordinates (Latitude, Longitude)'">
+                        {{item.coordinates.latitude}}<span>,</span>{{item.coordinates.longitude}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+

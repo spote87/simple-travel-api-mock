@@ -1,0 +1,40 @@
+<div ng-controller="AppController as appController">
+    <div class="container bg-transparent border border-success">
+        <div class="row text-center bg-success">
+            <div class="col-md-auto">
+                <!--  <img src="../assets/KLM-B777-200.jpg" class="img-fluid" alt="KLM aeroplane"> -->
+                <h1 class="font-weight-bold text-warning">TRAVEL ASSISTANT</h1>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-link" ng-click="appController.showHome()">Home</button>
+        </div>
+        <div class="" ng-if="appController.showLandingPage">
+            <div class="row  margin-top-xl text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <button type="button" class="btn btn-info btn-lg btn-block" ng-click="appController.getFares()">Get
+                        Fare
+                    </button>
+                </div>
+            </div>
+            <div class="row margin-top-xl text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <button type="button" class="btn btn-info btn-lg btn-block" ng-click="appController.getAirports()">
+                        List Of Airports
+                    </button>
+                </div>
+            </div>
+            <div class="row margin-top-xl text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <button type="button" class="btn btn-info btn-lg btn-block" ng-click="appController.metricsData()">
+                        Get Statistics Data
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div ng-if="appController.fare" ng-include="'app/states/get-fare/fare-details.template.html'"></div>
+        <div ng-if="appController.airports" ng-include="'app/states/airport-list/airport-list.template.html'"></div>
+        <div ng-if="appController.metrics" ng-include="'app/states/statistic-data/statistic-data.template.html'"></div>
+    </div>
+
+</div>
